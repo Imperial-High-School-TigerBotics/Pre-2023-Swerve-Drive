@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
-import com.ctre.phoenix.sensors.WPI_Pigeon2; //WORKING FIX ... hopefully..
+import com.ctre.phoenix.sensors.WPI_Pigeon2; //WORKING FIX ... hopefully.. [I DONT THINK IT WORKED(1/5/23)]
 
 public class SwerveSubsystem extends SubsystemBase {
     private final SwerveModule frontLeft = new SwerveModule(
@@ -50,7 +50,7 @@ public class SwerveSubsystem extends SubsystemBase {
             DriveConstants.kBackRightDriveAbsoluteEncoderOffsetRad,
             DriveConstants.kBackRightDriveAbsoluteEncoderReversed);
 
-    private final WPI_Pigeon2 gyro = new WPI_Pigeon2(13); //Change to CAN ID of the Pigeon2 (55 is just a place holder for now)
+    private final WPI_Pigeon2 gyroPigeon2 = new WPI_Pigeon2(13); //Change to CAN ID of the Pigeon2 
     private final SwerveDriveOdometry odometer = new SwerveDriveOdometry(DriveConstants.kDriveKinematics,
             new Rotation2d(0));
 
@@ -65,11 +65,11 @@ public class SwerveSubsystem extends SubsystemBase {
     }
 
     public void zeroHeading() {
-        gyro.reset();
+        gyroPigeon2.reset();
     }
 
     public double getHeading() {
-        return Math.IEEEremainder(gyro.getAngle(), 360);
+        return Math.IEEEremainder(gyroPigeon2.getAngle(), 360);
     }
 
     public Rotation2d getRotation2d() {
