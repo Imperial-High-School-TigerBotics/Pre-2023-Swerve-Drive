@@ -30,15 +30,15 @@ public final class Constants {
                 new Translation2d(-kWheelBase / 2, -kTrackWidth / 2),
                 new Translation2d(-kWheelBase / 2, kTrackWidth / 2));
 
-        public static final int kFrontLeftDriveMotorPort = 8; //Make sure motor ports match with robot (CAN)
-        public static final int kBackLeftDriveMotorPort = 2;
-        public static final int kFrontRightDriveMotorPort = 6;
-        public static final int kBackRightDriveMotorPort = 4;
+        public static final int kFrontLeftDriveMotorPort = 5; //Make sure motor ports match with robot (CAN)
+        public static final int kBackLeftDriveMotorPort = 7;
+        public static final int kFrontRightDriveMotorPort = 3;
+        public static final int kBackRightDriveMotorPort = 1;
 
-        public static final int kFrontLeftTurningMotorPort = 7;
-        public static final int kBackLeftTurningMotorPort = 1;
-        public static final int kFrontRightTurningMotorPort = 5;
-        public static final int kBackRightTurningMotorPort = 3;
+        public static final int kFrontLeftTurningMotorPort = 6;
+        public static final int kBackLeftTurningMotorPort = 8;
+        public static final int kFrontRightTurningMotorPort = 4;
+        public static final int kBackRightTurningMotorPort = 2;
 
         public static final boolean kFrontLeftTurningEncoderReversed = true;
         public static final boolean kBackLeftTurningEncoderReversed = true;
@@ -50,8 +50,8 @@ public final class Constants {
         public static final boolean kFrontRightDriveEncoderReversed = false;
         public static final boolean kBackRightDriveEncoderReversed = false;
 
-        public static final int kFrontLeftDriveAbsoluteEncoderPort = 9; //Make sure encoder ports match with robot (CAN)
-        public static final int kBackLeftDriveAbsoluteEncoderPort = 10;
+        public static final int kFrontLeftDriveAbsoluteEncoderPort = 10; //Make sure encoder ports match with robot (CAN)
+        public static final int kBackLeftDriveAbsoluteEncoderPort = 9;
         public static final int kFrontRightDriveAbsoluteEncoderPort = 11;
         public static final int kBackRightDriveAbsoluteEncoderPort = 12;
 
@@ -60,7 +60,7 @@ public final class Constants {
         public static final boolean kFrontRightDriveAbsoluteEncoderReversed = false;
         public static final boolean kBackRightDriveAbsoluteEncoderReversed = false;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = -0.254;
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = -0.254; //RECALIBRATE
         public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = -1.252;
         public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = -1.816;
         public static final double kBackRightDriveAbsoluteEncoderOffsetRad = -4.811;
