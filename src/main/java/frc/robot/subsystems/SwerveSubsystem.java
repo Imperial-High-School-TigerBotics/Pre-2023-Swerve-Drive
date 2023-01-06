@@ -7,7 +7,9 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.kinematics.SwerveDriveOdometry;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
+import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
@@ -52,7 +54,8 @@ public class SwerveSubsystem extends SubsystemBase {
 
     private final WPI_Pigeon2 gyroPigeon2 = new WPI_Pigeon2(13); //Change to CAN ID of the Pigeon2 
     private final SwerveDriveOdometry odometer = new SwerveDriveOdometry(DriveConstants.kDriveKinematics,
-            new Rotation2d(0));
+            new Rotation2d(0), new SwerveModulePosition[]{frontLeft.getPosition(), frontRight.getPosition(), backLeft.getPosition(),
+                backRight.getPosition()}, new Pose2d(5.0, 13.5, new Rotation2d()));
 
     public SwerveSubsystem() {
         new Thread(() -> {
@@ -64,8 +67,9 @@ public class SwerveSubsystem extends SubsystemBase {
         }).start();
     }
 
-    public void zeroHeading() {
+    public Command zeroHeading() {
         gyroPigeon2.reset();
+        return null;
     }
 
     public double getHeading() {
@@ -81,13 +85,14 @@ public class SwerveSubsystem extends SubsystemBase {
     }
 
     public void resetOdometry(Pose2d pose) {
-        odometer.resetPosition(pose, getRotation2d());
+        odometer.resetPosition(getRotation2d(), new SwerveModulePosition[]{frontLeft.getPosition(), frontRight.getPosition(), backLeft.getPosition(),
+            backRight.getPosition()}, pose);
     }
 
     @Override
     public void periodic() {
-        odometer.update(getRotation2d(), frontLeft.getState(), frontRight.getState(), backLeft.getState(),
-                backRight.getState());
+        odometer.update(getRotation2d(), new SwerveModulePosition[]{frontLeft.getPosition(), frontRight.getPosition(), backLeft.getPosition(),
+                backRight.getPosition()});
         SmartDashboard.putNumber("Robot Heading", getHeading());
         SmartDashboard.putString("Robot Location", getPose().getTranslation().toString());
     }
