@@ -47,8 +47,8 @@ public final class Constants {
 
         public static final boolean kFrontLeftDriveEncoderReversed = true;
         public static final boolean kBackLeftDriveEncoderReversed = true;
-        public static final boolean kFrontRightDriveEncoderReversed = true; //originally false
-        public static final boolean kBackRightDriveEncoderReversed = true; //originally false
+        public static final boolean kFrontRightDriveEncoderReversed = false; //originally false
+        public static final boolean kBackRightDriveEncoderReversed = false; //originally false
 
         public static final int kFrontLeftDriveAbsoluteEncoderPort = 10; //Make sure encoder ports match with robot (CAN)
         public static final int kBackLeftDriveAbsoluteEncoderPort = 9;
@@ -60,10 +60,10 @@ public final class Constants {
         public static final boolean kFrontRightDriveAbsoluteEncoderReversed = false;
         public static final boolean kBackRightDriveAbsoluteEncoderReversed = false;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = 0; //RECALIBRATE  -0.254;
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = 0;               //-1.252
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 0;             //-1.816
-        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 0;              //-4.811
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = -4.77; //RECALIBRATE  -0.254;
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = -5.30;               //-1.252
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = -2.22;             //-1.816
+        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = -1.57;              //-4.811
 
         public static final double kPhysicalMaxSpeedMetersPerSecond = 5;
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
