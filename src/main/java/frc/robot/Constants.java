@@ -9,7 +9,7 @@ public final class Constants {
 
     public static final class ModuleConstants {
         public static final double kWheelDiameterMeters = Units.inchesToMeters(4);
-        public static final double kDriveMotorGearRatio = 1 / 5.8462;
+        public static final double kDriveMotorGearRatio = 1 / 6.75;
         public static final double kTurningMotorGearRatio = 1 / 18.0;
         public static final double kDriveEncoderRot2Meter = kDriveMotorGearRatio * Math.PI * kWheelDiameterMeters;
         public static final double kTurningEncoderRot2Rad = kTurningMotorGearRatio * 2 * Math.PI;
@@ -60,10 +60,10 @@ public final class Constants {
         public static final boolean kFrontRightDriveAbsoluteEncoderReversed = false;
         public static final boolean kBackRightDriveAbsoluteEncoderReversed = false;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetDeg = -274.57;//10
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetDeg = -123.57;//9
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = -127.266;//11
-        public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = -89.561;//12
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetDeg = -273.15;//10
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetDeg = -122.57;//9
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = -128.23;//11
+        public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = -273.350;//12
 
         public static final double kPhysicalMaxSpeedMetersPerSecond = 5;
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
