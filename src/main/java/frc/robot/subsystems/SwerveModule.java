@@ -26,12 +26,12 @@ public class SwerveModule {
 
     private final CANCoder absoluteEncoder;
     private final boolean absoluteEncoderReversed;
-    private final double absoluteEncoderOffsetRad;
+    private final double absoluteEncoderOffsetDeg;
 
     public SwerveModule(int driveMotorId, int turningMotorId, boolean driveMotorReversed, boolean turningMotorReversed,
             int absoluteEncoderId, double absoluteEncoderOffset, boolean absoluteEncoderReversed) {
 
-        this.absoluteEncoderOffsetRad = absoluteEncoderOffset;
+        this.absoluteEncoderOffsetDeg = absoluteEncoderOffset;
         this.absoluteEncoderReversed = absoluteEncoderReversed;
         absoluteEncoder = new CANCoder(absoluteEncoderId);
 
@@ -79,16 +79,15 @@ public class SwerveModule {
         return Math.IEEEremainder(absoluteEncoder.getAbsolutePosition(), 360);
     }
 
-    public double getAbsoluteEncoderRad() {
-        double angle = absoluteEncoder.getBusVoltage() / RobotController.getVoltage5V();
-        angle *= 2.0 * Math.PI;
-        angle -= absoluteEncoderOffsetRad;
+    public double getAbsoluteEncoderDeg() {
+        double angle = absoluteEncoder.getAbsolutePosition();
+        angle -= absoluteEncoderOffsetDeg;
         return angle * (absoluteEncoderReversed ? -1.0 : 1.0);
     }
 
     public void resetEncoders() {
         driveEncoder.setPosition(0);
-        turningEncoder.setPosition(getAbsoluteEncoderRad());
+        turningEncoder.setPosition(getAbsoluteEncoderDeg());
     }
 
     public SwerveModuleState getState() {
