@@ -54,7 +54,7 @@ public class SwerveModule {
 
         resetEncoders();
 
-        SmartDashboard.putNumber("Encoder Rad of Swerve[" + absoluteEncoder.getDeviceID() + "]", absoluteEncoder.getAbsolutePosition()/**2.0 * Math.PI*/);
+        SmartDashboard.putNumber("Encoder Rad of Swerve[" + absoluteEncoder.getDeviceID() + "]", absoluteEncoder.getAbsolutePosition()*Math.PI/180);
 
       //  SmartDashboard.putString("Swerve[" + absoluteEncoder.getDeviceID() + "] state", toString());
     }
