@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
 import com.ctre.phoenix.sensors.WPI_Pigeon2; //WORKING FIX ... hopefully.. [I DONT THINK IT WORKED(1/5/23)]
+import com.revrobotics.AbsoluteEncoder;
 
 public class SwerveSubsystem extends SubsystemBase {
     private final SwerveModule frontLeft = new SwerveModule(
@@ -94,6 +95,11 @@ public class SwerveSubsystem extends SubsystemBase {
                 backRight.getPosition()});
         SmartDashboard.putNumber("Robot Heading", getHeading());
         SmartDashboard.putString("Robot Location", getPose().getTranslation().toString());
+
+        SmartDashboard.putNumber("Module 1 Cancoder", frontLeft.getRawAbsoluteEncoder());
+        SmartDashboard.putNumber("Module 2 Cancoder", frontRight.getRawAbsoluteEncoder());
+        SmartDashboard.putNumber("Module 3 Cancoder", backLeft.getRawAbsoluteEncoder());
+        SmartDashboard.putNumber("Module 3 Cancoder", backRight.getRawAbsoluteEncoder());
     }
 
     public void stopModules() {
