@@ -36,7 +36,7 @@ public final class Constants {
         public static final int kBackRightDriveMotorPort = 1;
 
         public static final int kFrontLeftTurningMotorPort = 6;
-        public static final int kBackLeftTurningMotorPort = 8;
+        public static final int kBackLeftTurningMotorPort = 80;
         public static final int kFrontRightTurningMotorPort = 4;
         public static final int kBackRightTurningMotorPort = 2;
 
