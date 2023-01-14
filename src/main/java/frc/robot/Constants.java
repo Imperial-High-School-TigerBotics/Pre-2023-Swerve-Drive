@@ -47,8 +47,8 @@ public final class Constants {
 
         public static final boolean kFrontLeftDriveEncoderReversed = false;
         public static final boolean kBackLeftDriveEncoderReversed = false;
-        public static final boolean kFrontRightDriveEncoderReversed = false; //originally false
-        public static final boolean kBackRightDriveEncoderReversed = false; //originally false
+        public static final boolean kFrontRightDriveEncoderReversed = false;
+        public static final boolean kBackRightDriveEncoderReversed = false;
 
         public static final int kFrontLeftDriveAbsoluteEncoderPort = 10; //Make sure encoder ports match with robot (CAN)
         public static final int kBackLeftDriveAbsoluteEncoderPort = 9;
@@ -65,14 +65,14 @@ public final class Constants {
         public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = 306.651;//11
         public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = 87.185;//12
 
-        public static final double kPhysicalMaxSpeedMetersPerSecond = 5;
-        public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
+        public static final double kPhysicalMaxSpeedMetersPerSecond = 10; // Original: 5
+        public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 4 * 2 * Math.PI; // Original: 2 * 2 * Math.PI
 
         public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
         public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = //
                 kPhysicalMaxAngularSpeedRadiansPerSecond / 4;
-        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 3;
-        public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 3;
+        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 6; //Original: 3
+        public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 6; //Original 3
     }
 
     public static final class AutoConstants {
