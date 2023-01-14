@@ -60,10 +60,10 @@ public final class Constants {
         public static final boolean kFrontRightDriveAbsoluteEncoderReversed = false;
         public static final boolean kBackRightDriveAbsoluteEncoderReversed = false;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetDeg = 93.076;//10
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetDeg = 302.871;//9
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = 307.091;//11
-        public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = 88.595;//12
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetDeg = 93.339;//10
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetDeg = 302.783;//9
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = 307.617;//11
+        public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = 89.560;//12
 
         public static final double kPhysicalMaxSpeedMetersPerSecond = 10; // Original: 5
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 4 * 2 * Math.PI; // Original: 2 * 2 * Math.PI
@@ -71,8 +71,8 @@ public final class Constants {
         public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
         public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = //
                 kPhysicalMaxAngularSpeedRadiansPerSecond / 4;
-        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 6; //Original: 3
-        public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 6; //Original 3
+        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 10; //Original: 3
+        public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 10; //Original 3
     }
 
     public static final class AutoConstants {
@@ -99,6 +99,6 @@ public final class Constants {
         public static final int kDriverRotAxis = 4;
         public static final int kDriverFieldOrientedButtonIdx = 1;
 
-        public static final double kDeadband = 0.1;
+        public static final double kDeadband = 0.01;
     }
 }
