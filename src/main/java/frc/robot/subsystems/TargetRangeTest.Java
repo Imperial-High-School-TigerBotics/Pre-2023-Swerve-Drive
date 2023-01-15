@@ -1,4 +1,4 @@
-public class Robot extends TimedRobot {
+/*public class Robot extends TimedRobot {
     // Constants such as camera and target height stored. Change per robot and goal!
     final double CAMERA_HEIGHT_METERS = Units.inchesToMeters(24);
     final double TARGET_HEIGHT_METERS = Units.feetToMeters(5);
@@ -63,4 +63,4 @@ public class Robot extends TimedRobot {
         // Use our forward/turn speeds to control the drivetrain
         drive.arcadeDrive(forwardSpeed, rotationSpeed);
     }
-}
+}*/
