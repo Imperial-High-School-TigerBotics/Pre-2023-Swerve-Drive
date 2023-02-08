@@ -30,15 +30,15 @@ public final class Constants {
                 new Translation2d(-kWheelBase / 2, -kTrackWidth / 2),
                 new Translation2d(-kWheelBase / 2, kTrackWidth / 2));
 
-        public static final int kFrontLeftDriveMotorPort = 5; //Make sure motor ports match with robot (CAN)
-        public static final int kBackLeftDriveMotorPort = 7;
-        public static final int kFrontRightDriveMotorPort = 3;
-        public static final int kBackRightDriveMotorPort = 1;
+        public static final int kFrontLeftDriveMotorPort = 4; //Make sure motor ports match with robot (CAN)
+        public static final int kBackLeftDriveMotorPort = 2;
+        public static final int kFrontRightDriveMotorPort = 6;
+        public static final int kBackRightDriveMotorPort = 8;
 
-        public static final int kFrontLeftTurningMotorPort = 6;
-        public static final int kBackLeftTurningMotorPort = 8;
-        public static final int kFrontRightTurningMotorPort = 4;
-        public static final int kBackRightTurningMotorPort = 2;
+        public static final int kFrontLeftTurningMotorPort = 3;
+        public static final int kBackLeftTurningMotorPort = 1;
+        public static final int kFrontRightTurningMotorPort = 5;
+        public static final int kBackRightTurningMotorPort = 7;
 
         public static final boolean kFrontLeftTurningEncoderReversed = false;
         public static final boolean kBackLeftTurningEncoderReversed = false;
@@ -60,10 +60,10 @@ public final class Constants {
         public static final boolean kFrontRightDriveAbsoluteEncoderReversed = false;
         public static final boolean kBackRightDriveAbsoluteEncoderReversed = false;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetDeg = 93.339;//10
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetDeg = 302.783;//9
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = 307.617;//11
-        public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = 89.560;//12
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetDeg = 359.384;//10
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetDeg = 211.992;//9
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = 216.914;//11
+        public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = 3.691;//12
 
         public static final double kPhysicalMaxSpeedMetersPerSecond = 10; // Original: 5
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 4 * 2 * Math.PI; // Original: 2 * 2 * Math.PI
@@ -71,15 +71,15 @@ public final class Constants {
         public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
         public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = //
                 kPhysicalMaxAngularSpeedRadiansPerSecond / 4;
-        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 10; //Original: 3
-        public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 10; //Original 3
+        public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 5; //Original: 3
+        public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 5; //Original 3
     }
 
     public static final class AutoConstants {
         public static final double kMaxSpeedMetersPerSecond = DriveConstants.kPhysicalMaxSpeedMetersPerSecond / 4;
         public static final double kMaxAngularSpeedRadiansPerSecond = //
                 DriveConstants.kPhysicalMaxAngularSpeedRadiansPerSecond / 10;
-        public static final double kMaxAccelerationMetersPerSecondSquared = 3;
+        public static final double kMaxAccelerationMetersPerSecondSquared = 6;
         public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI / 4;
         public static final double kPXController = 1.5;
         public static final double kPYController = 1.5;
