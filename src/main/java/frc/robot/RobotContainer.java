@@ -77,7 +77,7 @@ public class RobotContainer {
         SwerveSubsystem::setModuleStates, // Module states consumer used to output to the drive subsystem
         eventMap,
         true, // Should the path be automatically mirrored depending on alliance color. Optional, defaults to true
-        // The drive subsystem. Used to properly set the requirements of path following commands
+        SwerveSubsystem, SwerveModule// The drive subsystem. Used to properly set the requirements of path following commands
         );
 
         Command fullAuto = autoBuilder.fullAuto(pathGroup);
