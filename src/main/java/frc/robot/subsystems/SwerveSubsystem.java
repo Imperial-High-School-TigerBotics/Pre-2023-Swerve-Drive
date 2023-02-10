@@ -79,6 +79,10 @@ public class SwerveSubsystem extends SubsystemBase {
         return Rotation2d.fromDegrees(getHeading());
     }
 
+    public SwerveDriveKinematics kinemetics() {
+        return new SwerveDriveKinematics();
+    }
+
     public Pose2d getPose() {
         return odometer.getPoseMeters();
     }
