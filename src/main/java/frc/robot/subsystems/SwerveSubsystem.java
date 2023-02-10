@@ -1,9 +1,8 @@
 package frc.robot.subsystems;
 
-//import com.ctre.phoenix.sensors.Pigeon2;
-//import edu.wpi.first.wpilibj.interfaces.Gyro;
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.kinematics.SwerveDriveOdometry;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
@@ -80,7 +79,10 @@ public class SwerveSubsystem extends SubsystemBase {
     }
 
     public SwerveDriveKinematics kinemetics() {
-        return new SwerveDriveKinematics();
+        return new SwerveDriveKinematics(new Translation2d(24 / 2, -24 / 2),
+        new Translation2d(24 / 2, 24 / 2),
+        new Translation2d(-24 / 2, -24 / 2),
+        new Translation2d(-24 / 2, 24 / 2));
     }
 
     public Pose2d getPose() {
