@@ -6,6 +6,9 @@ import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
 
 public final class Constants {
+    public static final class SpeedScaleFactors{
+        public static final double SwerveMaxSpeed = 0.57; //Speed in percentage
+    }
 
     public static final class ModuleConstants {
         public static final double kWheelDiameterMeters = Units.inchesToMeters(4);
@@ -65,12 +68,12 @@ public final class Constants {
         public static final double kFrontRightDriveAbsoluteEncoderOffsetDeg = 217.353;//11
         public static final double kBackRightDriveAbsoluteEncoderOffsetDeg = 3.867;//12
 
-        public static final double kPhysicalMaxSpeedMetersPerSecond = 5; // Original: 5
+        public static final double kPhysicalMaxSpeedMetersPerSecond = 4.4; // Original: 5
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // Original: 2 * 2 * Math.PI
 
-        public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
+        public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond * SpeedScaleFactors.SwerveMaxSpeed;// / 4;
         public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = //
-                kPhysicalMaxAngularSpeedRadiansPerSecond / 4;
+                kPhysicalMaxAngularSpeedRadiansPerSecond * SpeedScaleFactors.SwerveMaxSpeed;// / 4;
         public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 3; //Original: 3
         public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 3; //Original 3
     }

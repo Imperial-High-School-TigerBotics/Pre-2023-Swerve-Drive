@@ -79,10 +79,12 @@ public class SwerveSubsystem extends SubsystemBase {
     }
 
     public SwerveDriveKinematics kinemetics() {
-        return new SwerveDriveKinematics(new Translation2d(24 / 2, -24 / 2),
+        return new SwerveDriveKinematics(
+        new Translation2d(24 / 2, -24 / 2),
         new Translation2d(24 / 2, 24 / 2),
         new Translation2d(-24 / 2, -24 / 2),
-        new Translation2d(-24 / 2, 24 / 2));
+        new Translation2d(-24 / 2, 24 / 2)
+        );
     }
 
     public Pose2d getPose() {
