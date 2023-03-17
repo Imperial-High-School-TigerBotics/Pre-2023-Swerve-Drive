@@ -87,15 +87,8 @@ public class SwerveModule {
 
     public double getAbsoluteEncoderDeg() {
         double angle = absoluteEncoder.getAbsolutePosition();
-
-
-
-
-        double x = absoluteEncoderOffsetDeg;
-    
-        
-
-        return x-angle;
+        double offset = absoluteEncoderOffsetDeg;
+        return offset - angle;
     }
 
     public double getRawAbsoluteEncoder(){
