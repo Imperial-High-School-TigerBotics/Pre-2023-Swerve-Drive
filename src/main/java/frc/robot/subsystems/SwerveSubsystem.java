@@ -107,6 +107,11 @@ public class SwerveSubsystem extends SubsystemBase {
         SmartDashboard.putNumber("Module Front Right Cancoder", frontRight.getRawAbsoluteEncoder());
         SmartDashboard.putNumber("Module Back Left Cancoder", backLeft.getRawAbsoluteEncoder());
         SmartDashboard.putNumber("Module Back Right Cancoder", backRight.getRawAbsoluteEncoder());
+
+        SmartDashboard.putNumber("Deg Front Left Cancoder", frontLeft.getAbsoluteEncoderDeg());
+        SmartDashboard.putNumber("Deg Front Right Cancoder", frontRight.getAbsoluteEncoderDeg());
+        SmartDashboard.putNumber("Deg Back Left Cancoder", backLeft.getAbsoluteEncoderDeg());
+        SmartDashboard.putNumber("Deg Back Right Cancoder", backRight.getAbsoluteEncoderDeg());
     }
 
     public void stopModules() {
